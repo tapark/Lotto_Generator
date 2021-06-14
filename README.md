@@ -1,6 +1,6 @@
-#로또번호 생성기
+# 로또번호 생성기
 
-by lazy를 통한 늦은 초기화 & NumberPicker
+### by lazy를 통한 늦은 초기화 & NumberPicker
 ~~~kotlin
 private val numberPicker: NumberPicker by lazy {
 	findViewById<NumberPicker>(R.id.numberPicker)
@@ -12,7 +12,7 @@ numberPicker.maxValue = 45
 numberPicker.value
 ~~~
 
-List, HashSet의 특정 객체(value) 존재 확인
+### List, HashSet의 특정 객체(value) 존재 확인
 ~~~kotlin
 numberHashSet.contains(value)
 numberList.contains(value)
@@ -21,7 +21,7 @@ numberList.contains(value)
 // List에는 1 ~ 45의 숫자를 넣고 HashSet에는 결정된(뽑은) 숫자를 저장
 ~~~
 
-Random Int 생성
+### Random Int 생성
 ~~~kotlin
 // List에 1 ~ 45의 숫자를 저장
 val numberList = mutableListOf<Int>().apply {
@@ -35,13 +35,13 @@ val numberList = mutableListOf<Int>().apply {
 numberList.shuffle()
 ~~~
 
-6개의 숫자를 List 형태로 저장 후 정렬
+### 6개의 숫자를 List 형태로 저장 후 정렬
 ~~~kotlin
 val resultList = pickNumberSet.toList() + numberList.subList(0, 6 - pickNumberSet.size)
 return resultList.sorted()
 ~~~
 
-TextView의 사용자정의 background 적용
+### TextView의 사용자정의 background 적용
 ~~~kotlin
 private fun setNumberBackground(number:Int, textView: TextView) {
     when (number) {
@@ -53,7 +53,7 @@ private fun setNumberBackground(number:Int, textView: TextView) {
         }
 ~~~
 
-forEach 와 forEachIndex
+### forEach 와 forEachIndex
 ~~~kotlin
 // forEach : 명시적으로 number 변수에 값을 지정
 numberList.forEach { number ->
